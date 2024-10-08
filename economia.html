@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economía de Quetzaltenango</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('economia.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start; /* Alinea los elementos a la izquierda */
+            gap: 5px; /* Reduce el espacio entre los botones */
+        }
+
+        nav ul li {
+            position: relative;
+            list-style: none;
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+            font-weight: bold;
+            padding: 5px 10px; /* Padding para mejorar el área de clic */
+        }
+
+        nav ul li a::before {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr);
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+        nav ul li:nth-child(1) a {
+            --clr: #FF5733; /* Color personalizado para el botón "Inicio" */
+        }
+
+        nav ul li:nth-child(2) a {
+            --clr: #4CAF50; /* Color personalizado para el botón "Comida" */
+        }
+
+        nav ul li:nth-child(3) a {
+            --clr: #2980B9; /* Color personalizado para el botón "Turísticos" */
+        }
+
+        nav ul li:nth-child(4) a {
+            --clr: #E74C3C; /* Color personalizado para el botón "Historia" */
+        }
+
+        nav ul li:nth-child(5) a {
+            --clr: #F39C12; /* Color personalizado para el botón "Economía" */
+        }
+
+        nav ul li:nth-child(6) a {
+            --clr: #9B59B6; /* Color personalizado para el botón "Cultura" */
+        }
+
+        nav ul li:nth-child(7) a {
+            --clr: #34495E; /* Color personalizado para el botón "Arquitectura" */
+        }
+
+        main {
+            padding: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contenido {
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .texto-centralizado {
+            flex: 1;
+            text-align: center;
+            margin-right: 300px;
+            padding-right: 20px;
+            font-size: 22px; /* Aumentado el tamaño de la letra */
+            line-height: 1.2; /* Mantener el interlineado original */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+        }
+
+        .imagen-y-dato {
+            position: absolute;
+            top: 20px;
+            right: 0;
+            text-align: left;
+            width: 350px; /* Mantener el tamaño del contenedor */
+            right: 10%;
+        }
+
+        .imagen-separada {
+            width: 400px; /* Ampliado el tamaño de la imagen */
+            height: auto;
+            border: 2px solid #333;
+            padding: 5px;
+            background-color: #fff;
+            border-radius: 5px; /* Bordes redondeados */
+        }
+
+        .dato-curioso {
+            font-style: italic;
+            color: #333;
+            margin-top: 10px;
+            border-left: 2px solid #333;
+            padding-left: 10px;
+            font-size: 18px; /* Mantener el tamaño del dato curioso */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" style="width: 150px; height: auto; margin-bottom: 10px;">
+        <h1>Economía de Quetzaltenango</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" data-text="Inicio">Inicio</a></li>
+            <li><a href="comida.html" data-text="Comida">Comida</a></li>
+            <li><a href="lugares.html" data-text="Turísticos">Turísticos</a></li>
+            <li><a href="historia.html" data-text="Historia">Historia</a></li>
+            <li><a href="economia.html" data-text="Economía">Economía</a></li>
+            <li><a href="cultura.html" data-text="Cultura">Cultura</a></li>
+            <li><a href="arquitectura.html" data-text="Arquitectura">Arquitectura</a></li>
+            <li><a href="independencia.html" data-text="Independencia">Independencia</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contenido">
+            <div class="texto-centralizado">
+                <p>La economía de Quetzaltenango es una de las más dinámicas de Guatemala, destacando en varios sectores clave. La ciudad es un importante centro comercial y de servicios en el occidente del país. Su economía se basa principalmente en la agricultura, con cultivos como el café, maíz y vegetales, que son fundamentales para su desarrollo económico. Además, Quetzaltenango cuenta con una creciente industria turística gracias a sus atractivos naturales y culturales, y una notable actividad en el comercio y los servicios, apoyada por su infraestructura de mercado y transporte.</p>
+            </div>
+            <div class="imagen-y-dato">
+                <img src="venta.jpg" alt="Imagen representativa de la economía" class="imagen-separada">
+                <div class="dato-curioso">
+                    <p>Un dato curioso sobre la economía de Quetzaltenango es que la ciudad ha sido históricamente un importante centro de comercio para el occidente de Guatemala debido a su ubicación estratégica en la región. Su mercado es uno de los más grandes y concurridos del país.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+         <p>© 2024 Quetzaltenango - David Aguirre.</p>
+    </footer>
+</body>
+</html>
+

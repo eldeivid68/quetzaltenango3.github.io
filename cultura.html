@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura de Quetzaltenango</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+             font-family: Arial, sans-serif;
+            background-image: url('cultura2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul li {
+            position: relative;
+            list-style: none;
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        nav ul li a::before {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: width 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr);
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+        nav ul li a[data-text="Inicio"] {
+            --clr: #FF5733;
+        }
+
+        nav ul li a[data-text="Comida"] {
+            --clr: #4CAF50;
+        }
+
+        nav ul li a[data-text="Turísticos"] {
+            --clr: #2980B9;
+        }
+
+        nav ul li a[data-text="Historia"] {
+            --clr: #E74C3C;
+        }
+
+        nav ul li a[data-text="Economía"] {
+            --clr: #F39C12;
+        }
+
+        nav ul li a[data-text="Cultura"] {
+            --clr: #9B59B6;
+        }
+
+        nav ul li a[data-text="Arquitectura"] {
+            --clr: #34495E;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contenido {
+            max-width: 1200px; /* Aumenta el ancho máximo del contenedor */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .texto-centralizado {
+            flex: 1;
+            text-align: left;
+            margin-right: 400px; /* Ajusta el margen derecho para más espacio */
+            padding-right: 20px;
+            font-size: 22px;
+            margin-top: 20px; /* Mantener margen superior */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+        }
+
+        .texto-centralizado h2 {
+            font-size: 28px;
+        }
+
+        .texto-centralizado h3 {
+            font-size: 24px;
+        }
+
+        .imagen-y-dato {
+            line-height: 1.2; /* Mantener el interlineado original */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+            width: 300px; /* Ajusta el ancho para que se ajuste mejor */
+            margin-top: 20px; /* Ajustar margen superior para la imagen */
+            margin-left: 50px; /* Añadir margen izquierdo para separación */
+            right: 10%;
+        }
+
+        .imagen-separada {
+            width: 100%; /* Ajustar tamaño para que se ajuste al contenedor */
+            height: auto;
+            border: 2px solid #333;
+            padding: 5px;
+            background-color: #fff;
+        }
+
+        .dato-curioso {
+            font-style: italic;
+            color: #333;
+            margin-top: 10px;
+            border-left: 2px solid #333;
+            padding-left: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" style="width: 150px; height: auto; margin-bottom: 10px;">
+        <h1>Cultura de Quetzaltenango</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" data-text="Inicio">Inicio</a></li>
+            <li><a href="comida.html" data-text="Comida">Comida</a></li>
+            <li><a href="lugares.html" data-text="Turísticos">Turísticos</a></li>
+            <li><a href="historia.html" data-text="Historia">Historia</a></li>
+            <li><a href="economia.html" data-text="Economía">Economía</a></li>
+            <li><a href="cultura.html" data-text="Cultura">Cultura</a></li>
+            <li><a href="arquitectura.html" data-text="Arquitectura">Arquitectura</a></li>
+            <li><a href="independencia.html" data-text="Independencia">Independencia</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contenido">
+            <div class="texto-centralizado">
+                <h2>Cultura de Quetzaltenango</h2>
+                <p>La cultura de Quetzaltenango es una rica amalgama de tradiciones indígenas y españolas que se reflejan en sus festividades, artes, música y gastronomía. La ciudad celebra una variedad de eventos culturales que destacan su herencia y diversidad.</p>
+                
+                <h3>Festividades y Tradiciones:</h3>
+                <p>- Feria de la Independencia: Esta festividad se celebra el 15 de septiembre con desfiles, música y eventos cívicos que conmemoran la independencia de Guatemala.</p>
+                <p>- Fiesta de la Virgen de la Asunción: Celebrada el 15 de agosto, esta festividad religiosa incluye procesiones, misas y eventos culturales en honor a la Virgen de la Asunción, patrona de la ciudad.</p>
+                <p>- Carnaval de Quetzaltenango: Un evento colorido y festivo que incluye desfiles, música en vivo y danza, reflejando la influencia de las tradiciones indígenas y españolas.</p>
+                <p>- Festival de la Cultura Maya: Este festival celebra la herencia maya a través de exposiciones de arte, música tradicional y actividades culturales.</p>
+                
+                <h3>Artes y Música:</h3>
+                <p>La ciudad cuenta con una vibrante escena artística que incluye teatro, danza y música. Grupos locales y artistas individuales presentan sus obras en diversos espacios culturales, promoviendo tanto la cultura tradicional como contemporánea.</p>
+                
+                <h3>Gastronomía:</h3>
+                <p>La gastronomía de Quetzaltenango es una mezcla de sabores indígenas y europeos. Los platos típicos incluyen tamales, pepián y kak'ik, una sopa tradicional hecha con carne y especias.</p>
+            </div>
+            <div class="imagen-y-dato">
+                <img src="cultura.jpg" alt="Imagen representativa de la cultura" class="imagen-separada">
+                <div class="dato-curioso">
+                    <p>Curiosidad: La Feria de la Independencia en Quetzaltenango es una de las celebraciones más grandes y antiguas del país, con raíces que se remontan al siglo XIX.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+         <p>© 2024 Quetzaltenango - David Aguirre.</p>
+    </footer>
+</body>
+</html>

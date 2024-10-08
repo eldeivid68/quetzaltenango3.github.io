@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal - Quetzaltenango</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('inicio.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff; /* Cambia el color del texto para mejor contraste */
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            display: flex; /* Para alinear el logo y el título horizontalmente */
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Espacio entre el logo y el texto */
+            color: #333;
+            text-transform: uppercase;
+            font-size: 2.5em;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        header img {
+            width: 80px; /* Tamaño del logo */
+            height: auto; /* Mantiene la proporción */
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start; 
+            gap: 20px; 
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+            font-weight: bold;
+        }
+
+        nav ul li a::before {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr);
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+        nav ul li:nth-child(1) a {
+            --clr: #FF5733; /* Color del primer enlace */
+        }
+
+        nav ul li:nth-child(2) a {
+            --clr: #4CAF50; /* Color del segundo enlace */
+        }
+
+        nav ul li:nth-child(3) a {
+            --clr: #2980B9; /* Color del tercer enlace */
+        }
+
+        nav ul li:nth-child(4) a {
+            --clr: #E74C3C; /* Color del cuarto enlace */
+        }
+
+        nav ul li:nth-child(5) a {
+            --clr: #F39C12; /* Color del quinto enlace */
+        }
+
+        nav ul li:nth-child(6) a {
+            --clr: #9B59B6; /* Color del sexto enlace */
+        }
+
+        nav ul li:nth-child(7) a {
+            --clr: #34495E; /* Color del séptimo enlace */
+        }
+
+        nav ul li:nth-child(8) a {
+            --clr: #FFD700; /* Color dorado para la Independencia */
+        }
+
+        main {
+            padding: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contenido {
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        
+        .texto-centralizado {
+            flex: 1;
+            text-align: center;
+            margin-right: 300px;
+            padding-right: 20px;
+            font-size: 22px; /* Aumentado el tamaño de la letra */
+            line-height: 1.2; /* Mantener el interlineado original */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+            text-align: center;
+        }
+
+        .texto-grande {
+            font-size: 22px; /* Tamaño del texto aumentado */
+            line-height: 1.6;
+        }
+
+        .imagen-y-dato {
+          line-height: 1.2;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 5px;
+          padding: 10px;
+          position: absolute;
+          top: 20px;
+          right: 10%; /* Cambié de 0 a 20% para mover el bloque hacia la izquierda */
+          text-align: left;
+          width: 300px;
+
+        }
+  
+        .imagen-separada {
+            width: 300px;
+            height: auto;
+            border: 2px solid #333;
+            padding: 5px;
+            background-color: #fff;
+        }
+
+        .dato-curioso {
+            font-style: italic;
+            color: #333;
+            margin-top: 10px;
+            border-left: 2px solid #333;
+            padding-left: 10px;
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" style="width: 150px; height: auto; margin-bottom: 10px;">
+        <h1>Bienvenidos a Quetzaltenango</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" data-text="Inicio">Inicio</a></li>
+            <li><a href="comida.html" data-text="Comida">Comida</a></li>
+            <li><a href="lugares.html" data-text="Turísticos">Turísticos</a></li>
+            <li><a href="historia.html" data-text="Historia">Historia</a></li>
+            <li><a href="economia.html" data-text="Economía">Economía</a></li>
+            <li><a href="cultura.html" data-text="Cultura">Cultura</a></li>
+            <li><a href="arquitectura.html" data-text="Arquitectura">Arquitectura</a></li>
+            <li><a href="independencia.html" data-text="Independencia">Independencia</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contenido">
+            <div class="texto-centralizado">
+                <p class="texto-grande">Quetzaltenango, también conocida como Xelajú o simplemente Xela, es la segunda ciudad más importante de Guatemala y la capital del departamento de Quetzaltenango. Está ubicada en la región occidental del país, a unos 2,333 metros sobre el nivel del mar, en un valle rodeado de montañas y volcanes. Con una rica herencia cultural y colonial, Quetzaltenango es un centro económico, cultural y educativo en Guatemala.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/NBV5KZDvqHg?si=Fbd8Iqy5ewQaB6z4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="imagen-y-dato">
+                <img src="15.jpg" alt="Imagen representativa" class="imagen-separada">
+                <div class="dato-curioso">
+                    <p>Es conocida por su tradición de celebrar la feria de “Feria de la Independencia” que ocurre cada 15 de septiembre, en conmemoración de la independencia de Guatemala.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Quetzaltenango - David Aguirre.</p>
+    </footer>
+</body>
+</html>

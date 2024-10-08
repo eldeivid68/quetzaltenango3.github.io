@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Quetzaltenango</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+             font-family: Arial, sans-serif;
+            background-image: url('arquitectura2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center; /* Centra verticalmente los botones */
+        }
+
+        nav ul li {
+            position: relative;
+            list-style: none;
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+            font-weight: bold;
+            padding: 10px 15px; /* Ajusta el padding para mejorar la apariencia */
+        }
+
+        nav ul li a::before {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: width 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr);
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+        nav ul li a[data-text="Inicio"] {
+            --clr: #FF5733;
+        }
+
+        nav ul li a[data-text="Comida"] {
+            --clr: #4CAF50;
+        }
+
+        nav ul li a[data-text="Turísticos"] {
+            --clr: #2980B9;
+        }
+
+        nav ul li a[data-text="Historia"] {
+            --clr: #E74C3C;
+        }
+
+        nav ul li a[data-text="Economía"] {
+            --clr: #F39C12;
+        }
+
+        nav ul li a[data-text="Cultura"] {
+            --clr: #9B59B6;
+        }
+
+        nav ul li a[data-text="Arquitectura"] {
+            --clr: #34495E;
+        }
+
+        main {
+            padding: 20px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .contenido {
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .texto-centralizado {
+            text-align: center;
+            padding-right: 20px;
+            font-size: 22px; /* Aumentado el tamaño de la letra */
+            line-height: 1.2; /* Mantener el interlineado original */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+            flex: 1;
+            text-align: left;
+            margin-right: 350px;
+        }
+
+        .imagen-y-dato {
+            line-height: 1.2; /* Mantener el interlineado original */
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px; /* Espaciado interno */
+            position: absolute;
+            top: 20px;
+            right: 0;
+            text-align: left;
+            width: 350px;
+            right: 10%;
+        }
+
+        .imagen-separada {
+            width: 350px;
+            height: auto;
+            border: 2px solid #333;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .dato-curioso {
+            font-style: italic;
+            color: #333;
+            margin-top: 10px;
+            border-left: 2px solid #333;
+            padding-left: 5px;
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" style="width: 150px; height: auto; margin-bottom: 10px;">
+        <h1>Arquitectura de Quetzaltenango</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html" data-text="Inicio">Inicio</a></li>
+            <li><a href="comida.html" data-text="Comida">Comida</a></li>
+            <li><a href="lugares.html" data-text="Turísticos">Turísticos</a></li>
+            <li><a href="historia.html" data-text="Historia">Historia</a></li>
+            <li><a href="economia.html" data-text="Economía">Economía</a></li>
+            <li><a href="cultura.html" data-text="Cultura">Cultura</a></li>
+            <li><a href="arquitectura.html" data-text="Arquitectura">Arquitectura</a></li>
+            <li><a href="independencia.html" data-text="Independencia">Independencia</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="contenido">
+            <div class="texto-centralizado">
+                <h2>Arquitectura de Quetzaltenango</h2>
+                <p>Quetzaltenango, con su rica historia y cultura, presenta una arquitectura que refleja tanto la herencia colonial española como las influencias indígenas. La ciudad está adornada con edificios históricos, iglesias y monumentos que muestran una mezcla de estilos neoclásicos, barrocos y modernos.</p>
+                
+                <h3>Edificios Destacados:</h3>
+                <p>- Catedral del Espíritu Santo: Esta catedral es un magnífico ejemplo de arquitectura neoclásica y es uno de los símbolos más representativos de la ciudad.</p>
+                <p>- Teatro Municipal: Un espacio cultural clave que no solo sirve para representaciones teatrales, sino también para eventos musicales y danzarios.</p>
+                <p>- Parque Centroamérica: Este parque es conocido por sus monumentos y estatuas que reflejan la historia y la cultura local.</p>
+                <p>- Cerro El Baúl: Ofrece una vista panorámica de la ciudad y sus alrededores, y es un lugar destacado tanto para el turismo como para la fotografía.</p>
+            </div>
+            <div class="imagen-y-dato">
+                <img src="arquitectura.jpg" alt="Imagen representativa de la arquitectura" class="imagen-separada">
+                <div class="dato-curioso">
+                    <p>Curiosidad: La Catedral del Espíritu Santo en Quetzaltenango es famosa por su impresionante fachada neoclásica, que contrasta con el estilo más tradicional de las iglesias locales.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+         <p>© 2024 Quetzaltenango - David Aguirre.</p>
+    </footer>
+</body>
+</html>
+
+
+
+

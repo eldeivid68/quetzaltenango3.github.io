@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida Típica de Quetzaltenango</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('comida.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+            font-size: 2.5em;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+            font-weight: bold;
+        }
+
+        nav ul li a::before {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr);
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+        nav ul li:nth-child(1) a {
+            --clr: #FF5733;
+        }
+
+        nav ul li:nth-child(2) a {
+            --clr: #4CAF50;
+        }
+
+        nav ul li:nth-child(3) a {
+            --clr: #2980B9;
+        }
+
+        nav ul li:nth-child(4) a {
+            --clr: #E74C3C;
+        }
+
+        nav ul li:nth-child(5) a {
+            --clr: #F39C12;
+        }
+
+        nav ul li:nth-child(6) a {
+            --clr: #9B59B6;
+        }
+
+        nav ul li:nth-child(7) a {
+            --clr: #34495E;
+        }
+
+        nav ul li:nth-child(8) a {
+            --clr: #FFD700; 
+        }
+
+        main {
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .button-container a {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .button-container a:hover {
+            background-color: #555;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo" style="width: 150px; height: auto; margin-bottom: 10px;">
+        Comida Típica
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" data-text="Inicio">Inicio</a></li>
+            <li><a href="comida.html" data-text="Comida">Comida</a></li>
+            <li><a href="lugares.html" data-text="Turístico">Turístico</a></li>
+            <li><a href="historia.html" data-text="Historia">Historia</a></li>
+            <li><a href="economia.html" data-text="Economía">Economía</a></li>
+            <li><a href="cultura.html" data-text="Cultura">Cultura</a></li>
+            <li><a href="arquitectura.html" data-text="Arquitectura">Arquitectura</a></li>
+            <li><a href="independencia.html" data-text="Independencia">Independencia</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="button-container">
+            <a href="#pepian" data-text="Pepian">Pepian</a>
+            <a href="#chojin" data-text="Chojín">Chojín</a>
+            <a href="#jocom" data-text="Jocom">Jocom</a>
+            <a href="#atol-elote" data-text="Atol de Elote">Atol de Elote</a>
+            <a href="#tamalitos-chipilin" data-text="Tamalitos de Chipilín">Tamalitos de Chipilín</a>
+            <a href="#paches" data-text="Paches">Paches</a>
+            <a href="#mojarra" data-text="Mojarra Frita">Mojarra Frita</a>
+            <a href="#torrejas" data-text="Torrejas">Torrejas</a>
+            <a href="#caldo-gallina" data-text="Caldo de Gallina Criolla">Caldo de Gallina Criolla</a>
+        </div>
+
+        <section id="pepian" class="section">
+            <h2>Pepian</h2>
+            <p>El pepian es un guiso tradicional de Guatemala con una rica mezcla de chiles, especias, y otros ingredientes, servido con carne.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bAxFnf1uYUQ?si=H5wk4XIj-wluvSZa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="chojin" class="section">
+            <h2>Chojín</h2>
+            <p>Chojín es un tipo de sopa espesa hecha con carne de cerdo y vegetales, conocido por su sabor robusto y especiado.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Csdkr9l1zGY?si=tSbXo5kVYMg4krMN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="jocom" class="section">
+            <h2>Jocom</h2>
+            <p>Jocom es un guiso a base de maíz, carne, y vegetales, que se cocina lentamente para obtener un sabor profundo y satisfactorio.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bbZjtHqDKS0?si=vfkFodNV8Kv5kfEI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="atol-elote" class="section">
+            <h2>Atol de Elote</h2>
+            <p>El atol de elote es una bebida caliente hecha de maíz tierno, leche, y azúcar, ideal para acompañar las comidas tradicionales.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/BQX0W5TTH1g?si=cNUvAbwQ06-yEw6r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="tamalitos-chipilin" class="section">
+            <h2>Tamalitos de Chipilín</h2>
+            <p>Estos tamales se preparan con masa de maíz y hojas de chipilín, cocidos al vapor, y se suelen servir con salsa.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OyP4ZLyb1eI?si=J5I05bs4iH64JDRC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="paches" class="section">
+            <h2>Paches</h2>
+            <p>Los paches son tamales hechos con masa de papa, típicamente servidos con salsa de tomate y acompañamientos.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0f-zL2LzR7g?si=SHigEFnttU8LT_qN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="mojarra" class="section">
+            <h2>Mojarra Frita</h2>
+            <p>La mojarra frita es un platillo popular en las zonas costeras de Guatemala, se sirve con ensalada y arroz.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2FLbGl-nr_s?si=RWKLy-VM95W-5XtF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="torrejas" class="section">
+            <h2>Torrejas</h2>
+            <p>Las torrejas son un postre hecho con pan, leche y azúcar, frecuentemente servido con miel o jarabe.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/F5NlF_K4clM?si=x7ZcGQX3mI0EGwwT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+
+        <section id="caldo-gallina" class="section">
+            <h2>Caldo de Gallina Criolla</h2>
+            <p>Este caldo es una sopa rica y nutritiva, preparada con gallina criolla y verduras frescas.</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/l3UUM6SOo6w?si=wlxN3TnTuGdrRkPo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Comida Típica de Quetzaltenango. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

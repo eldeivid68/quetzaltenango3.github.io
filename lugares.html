@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares Turísticos de Quetzaltenango</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('turismo.png'); /* Ruta a la imagen */
+            background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+            color: #fff; /* Cambia el color del texto para que contraste */
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: bold;
+            border-bottom: 2px solid #fff;
+        }
+
+        nav {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            position: sticky;
+            top: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        nav ul li {
+            position: relative;
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            line-height: 1em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.9);
+            font-weight: bold;
+        }
+
+        nav ul li a::before {
+            content: attr(data-text);
+            position: absolute;
+            color: var(--clr);
+            width: 0;
+            overflow: hidden;
+            transition: 1s;
+            border-right: 8px solid var(--clr);
+            -webkit-text-stroke: 1px var(--clr);
+        }
+
+        nav ul li a:hover::before {
+            width: 100%;
+            filter: drop-shadow(0 0 25px var(--clr));
+        }
+
+        nav ul li:nth-child(1) a {
+            --clr: #FF5733;
+        }
+
+        nav ul li:nth-child(2) a {
+            --clr: #4CAF50;
+        }
+
+        nav ul li:nth-child(3) a {
+            --clr: #2980B9;
+        }
+
+        nav ul li:nth-child(4) a {
+            --clr: #E74C3C;
+        }
+
+        nav ul li:nth-child(5) a {
+            --clr: #F39C12;
+        }
+
+        nav ul li:nth-child(6) a {
+            --clr: #9B59B6;
+        }
+
+        nav ul li:nth-child(7) a {
+            --clr: #34495E;
+        }
+
+        main {
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-container {
+            margin-bottom: 20px;
+        }
+
+        .button-container a {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .button-container a:hover {
+            background-color: #555;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.9); /* Fondo claro con transparencia */
+            max-width: 800px;
+            width: 100%;
+            color: #000; /* Texto en negro dentro de las secciones */
+        }
+
+        .section h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" style="width: 150px; height: auto; margin-bottom: 10px;">
+        <h1>Lugares Turísticos de Quetzaltenango</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" data-text="Inicio">Inicio</a></li>
+            <li><a href="comida.html" data-text="Comida">Comida</a></li>
+            <li><a href="lugares.html" data-text="Turístico">Turístico</a></li>
+            <li><a href="historia.html" data-text="Historia">Historia</a></li>
+            <li><a href="economia.html" data-text="Economía">Economía</a></li>
+            <li><a href="cultura.html" data-text="Cultura">Cultura</a></li>
+            <li><a href="arquitectura.html" data-text="Arquitectura">Arquitectura</a></li>
+            <li><a href="independencia.html" data-text="Independencia">Independencia</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="button-container">
+            <a href="#parque-centroamerica" data-text="Parque Centroamérica">Parque Centroamérica</a>
+            <a href="#catedral" data-text="Catedral">Catedral</a>
+            <a href="#teatro-municipal" data-text="Teatro Municipal">Teatro Municipal</a>
+            <a href="#cerro-el-baul" data-text="Cerro El Baúl">Cerro El Baúl</a>
+            <a href="#fuentes-georgias" data-text="Fuentes Georgias">Fuentes Georgias</a>
+        </div>
+
+        <section id="parque-centroamerica" class="section">
+            <h2>Parque Centroamérica</h2>
+            <p>El Parque Centroamérica es un importante espacio verde en el centro de Quetzaltenango, conocido por su arquitectura colonial y su ambiente relajado.</p>
+        </section>
+
+        <section id="catedral" class="section">
+            <h2>Catedral del Espíritu Santo</h2>
+            <p>La Catedral del Espíritu Santo es una impresionante iglesia ubicada en el corazón de la ciudad, famosa por su arquitectura neoclásica y su gran importancia religiosa.</p>
+        </section>
+
+        <section id="teatro-municipal" class="section">
+            <h2>Teatro Municipal de Quetzaltenango</h2>
+            <p>El Teatro Municipal de Quetzaltenango es un centro cultural que alberga una variedad de eventos artísticos y culturales, con una rica historia y una arquitectura destacada.</p>
+        </section>
+
+        <section id="cerro-el-baul" class="section">
+            <h2>Cerro El Baúl</h2>
+            <p>El Cerro El Baúl es un mirador natural que ofrece vistas panorámicas de la ciudad de Quetzaltenango y sus alrededores, siendo un lugar popular para el senderismo y el turismo.</p>
+        </section>
+
+        <section id="fuentes-georgias" class="section">
+            <h2>Fuentes Georgias</h2>
+            <p>Las Fuentes Georgias son un conjunto de fuentes ornamentales situadas en el Parque Central, conocidas por su belleza y su importancia histórica.</p>
+        </section>
+
+        <p><a href="index.html" data-text="Volver a Inicio">Volver a Inicio</a></p>
+    </main>
+
+    <footer>
+         <p>© 2024 Quetzaltenango - David Aguirre.</p>
+    </footer>
+</body>
+</html>
